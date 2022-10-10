@@ -1,7 +1,9 @@
 
 // **Iteración #2: Mix Fors**
 
-// Dado el siguiente javascript usa forof y forin para hacer la media del volumen de todos los sonidos favoritos que tienen los usuarios.
+// Dado el siguiente javascript usa forof y forin para hacer 
+// la media del volumen de todos los 
+// sonidos favoritos que tienen los usuarios.
 
 
 const users = [
@@ -34,3 +36,36 @@ const users = [
         }
     },
 ]
+
+let suma = 0;
+let cont = 0;
+
+for (const user of users) {
+    // console.log(user);
+    for (const key in user.favoritesSounds) {
+        // console.log(user.favoritesSounds[key].volume);
+        
+        //*Aquí tenemos la colusción más rápida:
+        // suma += user.favoritesSounds[key].volume;
+        // cont++;
+        
+        //*Una solución más legible:
+        const sound = user.favoritesSounds[key];
+        suma += sound.volume;
+        cont++;
+    }           
+ }
+   console.log (suma / cont);
+
+
+// const averageVolume = {totalVolume: 0, totalCount: 0}
+
+// for (const user of users) {
+//     for (const key in user.favoritesSounds) {
+        
+//             const favoriteSound = user.favoritesSounds[key];
+//             averageVolume.totalVolume += favoriteSound.volume;
+//             averageVolume.totalCount++; 
+//     }  
+// }
+// console.log(averageVolume.totalVolume / averageVolume.totalCount);
