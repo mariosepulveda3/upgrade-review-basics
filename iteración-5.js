@@ -8,8 +8,29 @@
 //   información sobre la función de javascript **Math.random();**
 
 
-function rollDice(max) {
-    return Math.floor(Math.random() * (max - 1) + 1);
+// Encontrado por internet, entendiendo cada funcionamiento.
+
+ function rollDice(max) {
+     return Math.floor(Math.random() * (max - 1) + 1);
   }
-  
-  console.log(rollDice(7));
+   console.log(rollDice(7));
+
+
+//* ALVARO CARU: hecho para comprobar que el código de arriba es fiable y
+//* que produce unos resultados "verdaderamente" aleatorios
+
+let roll = '';
+
+function fairnessChecker(nSides, nTries) {
+  let stats = {}
+  for (let i = 0; i < nTries; i++) {
+      roll = "r" + rollDice(nSides)
+      if (!stats.hasOwnProperty(roll)) {
+          stats[roll] = 1
+      } else {
+          stats[roll]++
+      }
+  }
+  return stats
+}
+console.log(fairnessChecker(6, 6000));

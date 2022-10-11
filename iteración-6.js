@@ -7,9 +7,38 @@
 
 // Sugerencia de array:
 
+const fakeSoccerPlayers = ['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño'];
 
-['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño']
-
-
+function swap (array, index1, index2) {
 
     
+}
+
+console.log (fakeSoccerPlayers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const element1 = array[index1];
+//     array[index1] = array[index2];
+//     array[index2] = element1;
+
+
+

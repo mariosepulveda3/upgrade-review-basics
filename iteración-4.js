@@ -16,23 +16,48 @@
 
 const animals = ['Caracol', 'Mosquito', 'Salamandra', 'Ajolote'];
 
-function findArrayIndex (array, text) {
-    //* Como se debía hacer, con un indexOf
-    // return array.indexOf(text);
+function findArrayIndex (array, texto) {
 
-    //* Haciendolo con for
-     for (let i = 0; i < array.length; i++) {
-         if (array[i] === text) {
-             return i;
-         }
-     }
+    return array.indexOf(texto);
 }
 
-console.log('Caracol tiene valor :');
-console.log(findArrayIndex(animals, 'Caracol'));
-console.log('Mosquito tiene valor :');
-console.log(findArrayIndex(animals, 'Mosquito'));
-console.log('Salamandra tiene valor :');
 console.log(findArrayIndex(animals, 'Salamandra'));
-console.log('Ajolote tiene valor :');
-console.log(findArrayIndex(animals, 'Ajolote'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function findArrayIndex (array, text) {
+//     //* Como se debía hacer, con un indexOf
+//     // return array.indexOf(text);
+
+//     //* Haciendolo con for
+//      for (let i = 0; i < array.length; i++) {
+//          if (array[i] === text) {
+//              return i;
+//          }
+//      }
+// }
+// console.log('Caracol tiene valor :');
+// console.log(findArrayIndex(animals, 'Caracol'));
+// console.log('Mosquito tiene valor :');
+// console.log(findArrayIndex(animals, 'Mosquito'));
+// console.log('Salamandra tiene valor :');
+// console.log(findArrayIndex(animals, 'Salamandra'));
+// console.log('Ajolote tiene valor :');
+// console.log(findArrayIndex(animals, 'Ajolote'));
