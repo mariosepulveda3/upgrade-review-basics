@@ -10,27 +10,28 @@
 
 // Encontrado por internet, entendiendo cada funcionamiento.
 
- function rollDice(max) {
-     return Math.floor(Math.random() * (max - 1) + 1);
+ function rollDice(numCaras) {
+    const max = numCaras;
+     return Math.floor(Math.random() * numCaras) + 1;
   }
-   console.log(rollDice(7));
+   console.log(rollDice(6));
 
 
 //* ALVARO CARU: hecho para comprobar que el código de arriba es fiable y
 //* que produce unos resultados "verdaderamente" aleatorios
 
-let roll = '';
+// let roll = '';
 
-function fairnessChecker(nSides, nTries) {
-  let stats = {}
-  for (let i = 0; i < nTries; i++) {
-      roll = "r" + rollDice(nSides)
-      if (!stats.hasOwnProperty(roll)) {
-          stats[roll] = 1
-      } else {
-          stats[roll]++
-      }
-  }
-  return stats
-}
-console.log(fairnessChecker(6, 6000));
+// function fairnessChecker(nSides, nTries) {
+//   let stats = {}
+//   for (let i = 0; i < nTries; i++) {
+//       roll = "r" + rollDice(nSides)
+//       if (!stats.hasOwnProperty(roll)) {
+//           stats[roll] = 1
+//       } else {
+//           stats[roll]++
+//       }
+//   }
+//   return stats
+// }
+// console.log(fairnessChecker(6, 6000));
